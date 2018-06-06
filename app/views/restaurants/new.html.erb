@@ -1,2 +1,20 @@
-<h1>Restaurants#address</h1>
-<p>Find me in app/views/restaurants/address.html.erb</p>
+<body>
+
+    <div class="container">
+        <h1>New Restaurant</h1>
+      <div class="cardnew">
+        <p><%=form_for(@restaurant) do |f|%></p>
+        <p><%=f.label :name%></p>
+        <p><%=f.text_field :name,  :class => 'form-control'%></p>
+        <p><%=f.label :address%></p>
+        <p><%=f.text_field :address,  :class => 'form-control'%></p>
+        <p><%=f.label :phone_number%></p>
+        <p><%=f.text_field :phone_number,  :class => 'form-control'%></p>
+        <%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"]%>
+      </div>
+      <div class="cardbottom">
+        <p><%=f.submit :class => "button"%></p>
+        <%end%>
+      </div>
+    </div>
+</body>

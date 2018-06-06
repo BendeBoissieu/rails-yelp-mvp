@@ -1,3 +1,86 @@
-// Place all the styles related to the restaurants controller here.
+// Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background: #EBEBEB;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color:  #7d7d7d;
+  font-size: 15px;
+  line-height: 1.6em;
+}
+
+
+
+h1, h2, h3{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  color: #DD5555;
+  font-size: 22px;
+}
+
+
+.container{
+  width: 500px;
+  margin: 30px auto;
+}
+.cardnew, .cardbottom, .card{
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+
+
+}
+
+
+
+
+.cardnew, .cardbottom{
+   text-align: center;
+   justify-content:center;
+
+
+}
+
+
+.cardbottom a{
+  color: #DD5555;
+  font-size: 22px;
+
+
+
+}
+
+a{
+  color: #ccc;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #DD5555;
+  text-decoration: none;
+}
+
+
+
+.button{
+  color: #DD5555;
+  font-size: 22px;
+  box-shadow: 1px 1px 2px grey;
+  padding: 10px;
+  text-align: center;
+  justify-content:center;
+  inline-size: -moz-available;
+
+
+}
+
+.form-control{
+  width: 97%;
+  height: 60px;
+}
+

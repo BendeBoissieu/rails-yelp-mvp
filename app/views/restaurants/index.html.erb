@@ -1,2 +1,21 @@
-<h1>Restaurants#name</h1>
-<p>Find me in app/views/restaurants/name.html.erb</p>
+<body>
+
+  <div class="container">
+
+    <h1 class="card-tilte"><strong>Restaurants: </strong></h1>
+
+      <div class="card">
+        <ul>
+
+        <% @restaurants.each do |restaurant| %>
+            <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+          <% end%>
+        </ul>
+      </div>
+
+ <p class="cardbottom"><%=link_to "Add a newe restaurant", restaurants_new_path%></p>
+
+
+
+  </div>
+</body>
