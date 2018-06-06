@@ -1,20 +1,16 @@
-<body>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>Create a new restaurant</h1>
+      <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name %>
 
-    <div class="container">
-        <h1>New Restaurant</h1>
-      <div class="cardnew">
-        <p><%=form_for(@restaurant) do |f|%></p>
-        <p><%=f.label :name%></p>
-        <p><%=f.text_field :name,  :class => 'form-control'%></p>
-        <p><%=f.label :address%></p>
-        <p><%=f.text_field :address,  :class => 'form-control'%></p>
-        <p><%=f.label :phone_number%></p>
-        <p><%=f.text_field :phone_number,  :class => 'form-control'%></p>
-        <%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"]%>
-      </div>
-      <div class="cardbottom">
-        <p><%=f.submit :class => "button"%></p>
-        <%end%>
-      </div>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <h3 style="text-align:left;">Category: <%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"]%></h3>
+        <h1></h1>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
     </div>
-</body>
+  </div>
+</div>
