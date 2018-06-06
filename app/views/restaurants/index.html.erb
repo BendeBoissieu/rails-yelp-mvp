@@ -1,21 +1,15 @@
-<body>
-
-  <div class="container">
-
-    <h1 class="card-tilte"><strong>Restaurants: </strong></h1>
-
-      <div class="card">
-        <ul>
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>All restaurants</h1>
+      <ul class="list-group">
         <% @restaurants.each do |restaurant| %>
-            <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
-          <% end%>
-        </ul>
-      </div>
-
- <p class="cardbottom"><%=link_to "Add a new restaurant", restaurants_new_path%></p>
-
-
-
+          <li class="list-group-item">
+            <%= link_to restaurant.name, restaurant_path(restaurant) %>
+          </li>
+        <% end %>
+      </ul>
+      <%= link_to "Add a new Restaurant", restaurants_new_path, class: 'btn btn-primary' %>
+    </div>
   </div>
-</body>
+</div>
